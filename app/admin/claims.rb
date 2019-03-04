@@ -11,5 +11,5 @@ ActiveAdmin.register Claim do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
+  permit_params :company_id, :user_id, :affair, :description, :claim_date
 end

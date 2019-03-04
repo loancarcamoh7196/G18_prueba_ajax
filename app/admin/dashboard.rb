@@ -4,10 +4,10 @@ ActiveAdmin.register_page "Dashboard" do
 
   content title: proc{ I18n.t("active_admin.dashboard") } do
     div class: "blank_slate_container", id: "dashboard_default_message" do
-      span class: "blank_slate" do
-        span I18n.t("active_admin.dashboard_welcome.welcome")
-        small I18n.t("active_admin.dashboard_welcome.call_to_action")
-      end
+      # span class: "blank_slate" do
+      #   span I18n.t("active_admin.dashboard_welcome.welcome")
+      #   small I18n.t("active_admin.dashboard_welcome.call_to_action")
+      # end
     end
 
     # Here is an example of a simple dashboard with columns and panels.
@@ -29,5 +29,23 @@ ActiveAdmin.register_page "Dashboard" do
     #     end
     #   end
     # end
+
+    # column :number_of_products do |category|
+    #   category.products.count
+    # end
+    columns do
+      column do
+        panel "Numbers" do
+          ul do
+            li "Total Users: #{User.count}"
+            li "Total Companies: #{Company.count}"
+            li "Total Claims: #{Claim.count}"
+          end
+        end
+      end
+
+    end
+
+
   end # content
 end
