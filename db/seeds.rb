@@ -39,3 +39,4 @@ Claim.destroy_all
     claim_date: Faker::Date.between(7.days.ago, Date.today)
   )
 }
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
