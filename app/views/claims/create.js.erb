@@ -1,0 +1,4 @@
+var fila  = '<tr>'+'<td>'+'<%= @claim.affair %></td>'+ '<td>'+'<%= @claim.description %>'+'</td>'+ '<td>'+'<%= @claim.claim_date %>'+'</td>'+ '<td>'+'<%= @claim.user.name %>'+'</td>'+ '</tr>';
+$('tbody').prepend(fila);
+$('#claim_affair').val('');
+$('#claim_description').val('');

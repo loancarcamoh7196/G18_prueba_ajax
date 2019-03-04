@@ -1,0 +1,26 @@
+<%= form_with(model: company) do |f|%>
+    <div class="form-group">
+        <%= f.label :name, "Nombre" %>
+        <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :duns_number, "Rol Unico Tributario" %>
+        <%= f.text_field :duns_number, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :industry, "Industria" %>
+        <%= f.text_field :industry, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :image, "Logo" %>
+        <%= f.file_field :image, class: 'form-control-file' %>
+    </div>
+
+
+    <div class="form-actions">
+        <%= f.submit "Submit", disable_with: 'Submiting...', class: 'btn btn-outline-success' %>
+    </div>
+<% end %>

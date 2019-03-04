@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h1><%= @company.name %></h1>
+            <p><%= @company.industry %></p>
+            <p><%= @company.duns_number %></p>
+        </div>
+        <div class="col-6">
+            <%= render 'claim-form', company: @company, claim: @claim %>
+        </div>
+        <div class="col-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Asunto</th>
+                        <th>Descripcion del Conflicto</th>
+                        <th>Fecha</th>
+                        <th>Nombre reclamante</th>
+                    </tr>
+                </thead>
+                <tbody id="lista">
+                    <% @claims.each do |claim| %>
+                        <tr>
+                            <td><%= claim.affair %></td>
+                            <td><%= claim.description %></td>
+                            <td><%= claim.claim_date %></td>
+                            <td><%= claim.user.name %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

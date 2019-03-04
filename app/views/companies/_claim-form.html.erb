@@ -1,0 +1,16 @@
+<%= form_with(model: [company, claim]) do |f|%>
+    <div class="form-group">
+        <%= f.label :affair, "Asunto" %>
+        <%= f.text_field :affair, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :description, "Descripción del Reclamo" %>
+        <%= f.text_area :description, class: 'form-control' %>
+    </div>
+
+
+    <div class="form-actions">
+        <%= f.submit "Submit", disable_with: 'Submiting...', class: 'btn btn-outline-success' %>
+    </div>
+<% end %>

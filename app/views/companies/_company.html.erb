@@ -1,0 +1,12 @@
+<tr id="<%= company.id %>">
+    <td><%= company.name %></td>
+    <td><%= company.duns_number %></td>
+    <td><%= company.industry %></td>
+    <td><%= link_to 'Detalle', company %></td>
+    <td>
+        <%= link_to 'Editar', edit_company_path(company), remote: true %>
+    </td>
+    <td>
+        <%= link_to 'Eliminar', company_path(company), method: :delete, remote: true, data: { confirm: 'Estas seguro?'} %>
+    </td>
+</tr>
